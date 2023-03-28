@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AnnonceRepository extends JpaRepository<Annonces,Long> {
+    Annonces findByAnnonce(String name);
 }

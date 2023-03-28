@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DomaineactiviteRepository extends JpaRepository<Domaineactivite,Long> {
+    Domaineactivite findByDomaine(String name);
 }
