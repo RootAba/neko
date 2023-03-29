@@ -38,4 +38,5 @@ public class Appelvideo {
     @OneToMany(mappedBy = "appelvideo")
     private Set<Participantappelvideo> participantappelvideos = new HashSet<>();
 
+
 }

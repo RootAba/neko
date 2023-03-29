@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CvemploiRepository extends JpaRepository<Cvemploi,Long> {
+    Cvemploi findByCvemploi(String name);
 }
