@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PubvideoRepository extends JpaRepository<PubVideo,Long> {
+    PubVideo findByPubvideo(String name);
 }
