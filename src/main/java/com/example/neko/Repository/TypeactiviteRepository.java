@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TypeactiviteRepository extends JpaRepository<Typeactivite,Long> {
+    Typeactivite findByTypeactivite(String name);
 }
