@@ -19,7 +19,13 @@ public class CvemploiServiceImpl implements CvemploiService {
 
     @Override
     public Cvemploi Modifier(long id, Cvemploi cvemploi) {
-        return null;
+        return cvemploiRepository.findById(id)
+                .map(p->{
+                            p.setCv(cvemploi.getCv());
+                            return cvemploiRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Modification a echoué"));
+    }
     }
 
     @Override

@@ -20,8 +20,14 @@ public class PublicationsServiceImplemnt implements PublicationService {
 
     @Override
     public Publications Modifier(long id, Publications publications) {
-        return null;
+        return publicationRepository.findById(id)
+                .map(p->{
+                            p.setNom(publications.getNom());
+                            return publicationRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Modification a echoué"));
     }
+
 
     @Override
     public void Supprimer(long id) {

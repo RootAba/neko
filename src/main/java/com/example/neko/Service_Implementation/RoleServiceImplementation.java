@@ -19,27 +19,33 @@ public class RoleServiceImplementation implements RoleService {
     }
 
     @Override
-    public Roles Modifier(long id, Roles roles) {
-        return null;
+    public Roles Modifier(int id, Roles roles) {
+        return roleRepository.findById(id)
+                .map(p->{
+                            p.setNom(roles.getNom());
+                            return roleRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Modification a echoué"));
     }
 
     @Override
-    public void Supprimer(long id) {
+    public void Supprimer(int id) {
+        roleRepository.deleteById(id);
 
     }
 
     @Override
     public List<Roles> getAll() {
-        return null;
+        return roleRepository.findAll();
     }
 
     @Override
-    public Roles GetId(long id) {
-        return null;
+    public Roles GetId(int id) {
+      return roleRepository.findById(id).get();
     }
 
     @Override
     public Roles GetByName(String name) {
-        return null;
+        return  roleRepository.findByRole(name);
     }
 }

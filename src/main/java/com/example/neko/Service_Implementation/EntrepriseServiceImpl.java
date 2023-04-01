@@ -18,8 +18,14 @@ public class EntrepriseServiceImpl implements EntrepriseService {
 
     @Override
     public Entreprise Modifier(long id, Entreprise entreprise) {
-        return null;
+        return entrepriseRepository.findById(id)
+                .map(p->{
+                            p.setDomaine(entreprise.getDomaine());
+                            return entrepriseRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Modification a echoué"));
     }
+
 
     @Override
     public void Supprimer(long id) {

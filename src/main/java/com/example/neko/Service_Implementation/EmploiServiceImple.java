@@ -18,8 +18,14 @@ public class EmploiServiceImple implements EmploiService {
 
     @Override
     public Emploi Modifier(long id, Emploi emploi) {
-        return null;
+        return emploiRepository.findById(id)
+                .map(p->{
+                            p.setEmail(emploi.getEmail());
+                            return emploiRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Modification a echoué"));
     }
+
 
     @Override
     public void Supprimer(long id) {

@@ -18,7 +18,12 @@ public class ChatServiceImplemt implements ChatService {
 
     @Override
     public Chat Modifier(long id, Chat chat) {
-        return null;
+        return chatRepository.findById(id)
+                .map(p->{
+                            p.setContenu(chat.getContenu());
+                            return chatRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Chat a echoué"));
     }
 
     @Override

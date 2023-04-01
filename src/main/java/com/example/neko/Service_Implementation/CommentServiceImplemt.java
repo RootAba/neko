@@ -18,7 +18,12 @@ public class CommentServiceImplemt implements CommentaireService {
 
     @Override
     public Commentaires Modifier(long id, Commentaires commentaires) {
-        return null;
+        return commentaireRepository.findById(id)
+                .map(p->{
+                            p.setContenu(commentaires.getContenu());
+                            return commentaireRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Modification a echoué"));
     }
 
     @Override

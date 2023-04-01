@@ -19,7 +19,12 @@ public class ArtisteServiceImplementation implements ArtisteService {
 
     @Override
     public Artiste Modifier(long id, Artiste artiste) {
-        return null;
+        return artisteRepository.findById(id)
+                .map(p->{
+                            p.setEmail(artiste.getEmail());
+                            return artisteRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Artiste a echoué"));
     }
 
     @Override
@@ -40,6 +45,6 @@ public class ArtisteServiceImplementation implements ArtisteService {
 
     @Override
     public Artiste GetByName(String name) {
-        return artisteRepository.findByArtiste(name);
+        return artisteRepository.findByEmail(name);
     }
 }

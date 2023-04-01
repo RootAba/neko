@@ -18,7 +18,12 @@ public class AppelVideoServiceImplement implements AppelvideoService {
 
     @Override
     public Appelvideo Modifier(long id, Appelvideo appelvideo) {
-        return null;
+        return appelvideoRepository.findById(id)
+                .map(p->{
+                            p.setVideo(appelvideo.getVideo());
+                            return appelvideoRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Appelvideo a echoué"));
     }
 
 
@@ -40,6 +45,6 @@ public class AppelVideoServiceImplement implements AppelvideoService {
 
     @Override
     public Appelvideo GetByName(String name) {
-        return appelvideoRepository.findByAppelVideo(name);
+        return appelvideoRepository.findByVideo(name);
     }
 }

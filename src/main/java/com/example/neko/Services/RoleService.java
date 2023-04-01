@@ -8,9 +8,9 @@ public interface RoleService {
 
     //Creer role
     Roles AjouterRole(Roles role);
-    Roles Modifier (long id, Roles roles);
-    void Supprimer (long id);
+    Roles Modifier (int id, Roles roles);
+    void Supprimer (int id);
     List<Roles> getAll();
-   Roles GetId(long id);
+   Roles GetId(int id);
     Roles GetByName(String name);
 }

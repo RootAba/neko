@@ -18,7 +18,13 @@ public class CommerceServiceImpl implements CommerceService {
 
     @Override
     public Commerce Modifier(long id, Commerce commerce) {
-        return null;
+        return commerceRepository.findById(id)
+                .map(p->{
+                            p.setNom(commerce.getNom());
+                            return commerceRepository.save(p);
+                        }
+                ).orElseThrow(()->new RuntimeException("Modification a echoué"));
+    }
     }
 
     @Override
