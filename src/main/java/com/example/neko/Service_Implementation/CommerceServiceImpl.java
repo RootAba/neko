@@ -25,7 +25,7 @@ public class CommerceServiceImpl implements CommerceService {
                         }
                 ).orElseThrow(()->new RuntimeException("Modification a echoué"));
     }
-    }
+
 
     @Override
     public void Supprimer(long id) {

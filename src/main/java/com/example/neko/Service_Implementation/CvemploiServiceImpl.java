@@ -26,7 +26,7 @@ public class CvemploiServiceImpl implements CvemploiService {
                         }
                 ).orElseThrow(()->new RuntimeException("Modification a echoué"));
     }
-    }
+
 
     @Override
     public void Supprimer(long id) {
