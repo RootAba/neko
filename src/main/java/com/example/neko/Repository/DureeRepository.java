@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DureeRepository extends JpaRepository<Duree,Long> {
+
+
+    Duree findByDuree(String name);
 }

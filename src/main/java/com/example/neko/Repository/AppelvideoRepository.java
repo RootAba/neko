@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AppelvideoRepository extends JpaRepository<Appelvideo,Long> {
+    Appelvideo findByVideo(String name);
 }
