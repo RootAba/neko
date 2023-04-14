@@ -12,5 +12,5 @@ public interface EntrepriseService {
     void Supprimer (long id);
     List<Entreprise> getAll();
     Entreprise GetId(long id);
-    Entreprise GetByName(String name);
+    Entreprise GetByDomaine(String domaine);
 }

@@ -1,6 +1,5 @@
 package com.example.neko.Models;
 import jakarta.persistence.*;
-import jdk.jshell.execution.Util;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

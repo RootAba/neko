@@ -10,5 +10,5 @@ public interface PubaudioService {
     void Supprimer (long id);
     List<Pubaudio> getAll();
     Pubaudio GetId(long id);
-    Pubaudio GetByName(String name);
+    //Pubaudio GetByName(String name);
 }

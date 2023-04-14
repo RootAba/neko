@@ -42,8 +42,8 @@ public class CommentServiceImplemt implements CommentaireService {
         return commentaireRepository.findById(id).get();
     }
 
-    @Override
+  /*  @Override
     public Commentaires GetByName(String name) {
         return commentaireRepository.findByCommentaire(name);
-    }
+    }*/
 }

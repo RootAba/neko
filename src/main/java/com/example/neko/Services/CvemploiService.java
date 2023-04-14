@@ -11,5 +11,5 @@ public interface CvemploiService {
     void Supprimer (long id);
     List<Cvemploi> getAll();
     Cvemploi GetId(long id);
-   Cvemploi GetByName(String name);
+   //Cvemploi GetByName(String name);
 }

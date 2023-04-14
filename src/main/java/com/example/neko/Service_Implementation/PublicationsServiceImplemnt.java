@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class PublicationsServiceImplemnt implements PublicationService {
-    @Autowired
-    PublicationService publicationService;
+   /* @Autowired
+    PublicationService publicationService;*/
     @Autowired
     PublicationRepository publicationRepository;
     @Override
@@ -47,6 +47,6 @@ public class PublicationsServiceImplemnt implements PublicationService {
 
     @Override
     public Publications GetByName(String name) {
-        return publicationRepository.findByPublication(name);
+        return publicationRepository.findByNom(name);
     }
 }

@@ -42,8 +42,8 @@ public class ChatServiceImplemt implements ChatService {
         return chatRepository.findById(id).get();
     }
 
-    @Override
+   /* @Override
     public Chat GetByName(String name) {
-        return chatRepository.findByChat(name);
-    }
+        return chatRepository.fin(name);
+    }*/
 }

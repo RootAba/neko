@@ -40,8 +40,8 @@ public class PubAudioServiceImplemnt implements PubaudioService {
         return pubaudioRepository.findById(id).get();
     }
 
-    @Override
+  /*  @Override
     public Pubaudio GetByName(String name) {
         return pubaudioRepository.findByPubAudio(name);
-    }
+    }*/
 }

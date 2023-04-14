@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PubphotoRepository extends JpaRepository<Pubphoto,Long> {
-    Pubphoto findByPubphoto(String name);
+   // Pubphoto findByPubphoto(String name);
 }

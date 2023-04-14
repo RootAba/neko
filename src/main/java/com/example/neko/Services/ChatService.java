@@ -12,5 +12,5 @@ public interface ChatService {
             ;
     List<Chat> getAll();
     Chat GetId(long id);
-    Chat GetByName(String name);
+  //  Chat GetByName(String name);
 }

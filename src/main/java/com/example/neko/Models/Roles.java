@@ -7,28 +7,23 @@ import lombok.Setter;
 
 @Getter
 @Setter
-
 @Entity
+@Table(name = "roles")
 public class Roles {
-   /* @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private  String libelle;*/
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
-    private ERole nom;
+    private ERole name;
 
     public Roles() {
 
     }
 
     public Roles(ERole name) {
-        this.nom = name;
+        this.name = name;
     }
 
     public Integer getId() {
@@ -39,21 +34,11 @@ public class Roles {
         this.id = id;
     }
 
-    public ERole getNom() {
-        return nom;
+    public ERole getName() {
+        return name;
     }
 
-    public void setNom(ERole nom) {
-        this.nom = nom;
+    public void setName(ERole name) {
+        this.name = name;
     }
-
-    /*
-    @JsonIgnore
-    @OneToMany(mappedBy = "role")
-    List<Alumnis> alumnis = new ArrayList<>();*/
-
-  /*  @JsonIgnore
-    @OneToMany(mappedBy = "role")
-    List<Administrateurs> administrateurs = new ArrayList<>();*/
 }
-

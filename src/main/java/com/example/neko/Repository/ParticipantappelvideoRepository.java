@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ParticipantappelvideoRepository extends JpaRepository<Participantappelvideo,Long> {
-    Participantappelvideo findByParticipantappelRepository(String name);
+   // Participantappelvideo findByParticipantappelRepository(String name);
 }

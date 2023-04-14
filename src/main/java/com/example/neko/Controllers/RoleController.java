@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/roles")
 public class RoleController {
     @Autowired
     RolesRepository rolesRepository;

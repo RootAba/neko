@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CommerceRepository extends JpaRepository<Commerce,Long> {
-    Commerce findByCommerce(String name);
+    Commerce findByNom(String name);
 }

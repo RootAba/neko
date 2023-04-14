@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 public interface ChatRepository extends JpaRepository<Chat,Long> {
     Chat findByContenu(String name);
 
-    Chat findByChat(String name);
+
+   // Chat findByChat(String name);
 }

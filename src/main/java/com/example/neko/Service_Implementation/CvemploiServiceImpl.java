@@ -44,8 +44,8 @@ public class CvemploiServiceImpl implements CvemploiService {
         return cvemploiRepository.findById(id).get();
     }
 
-    @Override
+  /*  @Override
     public Cvemploi GetByName(String name) {
         return cvemploiRepository.findByCvemploi(name);
-    }
+    }*/
 }

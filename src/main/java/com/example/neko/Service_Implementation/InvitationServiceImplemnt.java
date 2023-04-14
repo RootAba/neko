@@ -42,8 +42,8 @@ public class InvitationServiceImplemnt implements InvitationService {
         return invitationRepository.findById(id).get();
     }
 
-    @Override
+  /*  @Override
     public Invitations GetByName(String name) {
         return invitationRepository.findByInvitation(name);
-    }
+    }*/
 }

@@ -44,6 +44,6 @@ public class ProduitServiceImplem implements ProduitService {
 
     @Override
     public Produits GetByName(String name) {
-        return produitRepository.findByProduit(name);
+        return produitRepository.findByNom(name);
     }
 }

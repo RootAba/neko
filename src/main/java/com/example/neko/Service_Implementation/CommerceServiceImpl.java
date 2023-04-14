@@ -45,6 +45,6 @@ public class CommerceServiceImpl implements CommerceService {
 
     @Override
     public Commerce GetByName(String name) {
-        return commerceRepository.findByCommerce(name);
+        return commerceRepository.findByNom(name);
     }
 }

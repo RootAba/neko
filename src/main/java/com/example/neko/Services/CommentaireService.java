@@ -12,5 +12,5 @@ public interface CommentaireService {
     void Supprimer (long id);
     List<Commentaires> getAll();
     Commentaires GetId(long id);
-   Commentaires GetByName(String name);
+  // Commentaires GetByName(String name);
 }

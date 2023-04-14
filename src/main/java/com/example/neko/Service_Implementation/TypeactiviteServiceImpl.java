@@ -44,6 +44,6 @@ public class TypeactiviteServiceImpl implements TypeactiviteService {
 
     @Override
     public Typeactivite GetByName(String name) {
-        return typeactiviteRepository.findByTypeactivite(name);
+        return typeactiviteRepository.findByType(name);
     }
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping
+@RequestMapping("/artiste")
 public class ArtisteController {
     @Autowired
     ArtisteService artisteService;
@@ -32,8 +32,8 @@ public class ArtisteController {
         artisteService.Supprimer(id);
     }
 
-    @GetMapping("/get/{id}")
-    public Artiste getId(@PathVariable("id") long id) {
+    @GetMapping("/recup/{id}")
+    public Artiste RecupParId(@PathVariable("id") long id) {
         return artisteService.GetId(id);
     }
 

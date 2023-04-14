@@ -10,5 +10,5 @@ public interface InvitationService {
     void Supprimer (long id);
     List<Invitations> getAll();
     Invitations GetId(long id);
-    Invitations GetByName(String name);
+   // Invitations GetByName(String name);
 }

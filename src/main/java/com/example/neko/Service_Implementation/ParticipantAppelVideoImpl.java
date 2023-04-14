@@ -42,8 +42,8 @@ public class ParticipantAppelVideoImpl implements ParticipantappelvideoService {
         return participantappelvideoRepository.findById(id).get();
     }
 
-    @Override
+  /*  @Override
     public Participantappelvideo GetByName(String name) {
         return participantappelvideoRepository.findByParticipantappelRepository(name);
-    }
+    }*/
 }

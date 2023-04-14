@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/appelvideo")
+@RequestMapping("/Paricipant")
 public class ParticipantAppelVideoController {
     @Autowired
     ParticipantappelvideoRepository participantappelvideoRepository;
@@ -28,8 +28,8 @@ public class ParticipantAppelVideoController {
     void  Supprimer(@PathVariable("id") long id ){
          participantappelvideoService.Supprimer(id);
     }
-    @GetMapping("/get/{id}")
-    public  Participantappelvideo getId(@PathVariable("id") long id){
+    @GetMapping("/recupParId/{id}")
+    public  Participantappelvideo RecupId(@PathVariable("id") long id){
         return   participantappelvideoService.GetId(id);
     }
     @GetMapping("/list")

@@ -44,8 +44,8 @@ public class EntrepriseServiceImpl implements EntrepriseService {
     }
 
     @Override
-    public Entreprise GetByName(String name) {
-        return entrepriseRepository.findByEntreprise(name);
+    public Entreprise GetByDomaine(String name) {
+        return entrepriseRepository.findByDomaine(name);
     }
 
 

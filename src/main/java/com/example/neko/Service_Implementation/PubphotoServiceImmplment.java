@@ -9,8 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class PubphotoServiceImmplment implements PubphotoService {
-    @Autowired
-    PubphotoService pubphotoService;
+
     @Autowired
     PubphotoRepository pubphotoRepository;
     @Override
@@ -44,8 +43,8 @@ public class PubphotoServiceImmplment implements PubphotoService {
         return pubphotoRepository.findById(id).get();
     }
 
-    @Override
+  /*  @Override
     public Pubphoto GetByName(String name) {
         return pubphotoRepository.findByPubphoto(name);
-    }
+    }*/
 }

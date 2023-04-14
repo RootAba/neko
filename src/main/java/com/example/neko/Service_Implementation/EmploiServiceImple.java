@@ -45,6 +45,6 @@ public class EmploiServiceImple implements EmploiService {
 
     @Override
     public Emploi GetByName(String name) {
-        return emploiRepository.findByEmploi(name);
+        return emploiRepository.findByEmail(name);
     }
 }

@@ -10,6 +10,6 @@ public interface ParticipantappelvideoService {
     void Supprimer (long id);
     List< Participantappelvideo> getAll();
      Participantappelvideo GetId(long id);
-     Participantappelvideo GetByName(String name);
+    // Participantappelvideo GetByName(String name);
    
 }

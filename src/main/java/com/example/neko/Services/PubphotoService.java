@@ -10,5 +10,5 @@ public interface PubphotoService {
     void Supprimer (long id);
     List<Pubphoto> getAll();
     Pubphoto GetId(long id);
-    Pubphoto GetByName(String name);
+    //Pubphoto GetByName(String name);
 }

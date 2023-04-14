@@ -4,6 +4,7 @@ import com.example.neko.Models.Utilisateur;
 import com.example.neko.Repository.UtilisateurRepository;
 import com.example.neko.Services.UtilisateurService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +12,13 @@ import java.util.List;
 public class UtilisateurServiceImple implements UtilisateurService {
     @Autowired
     UtilisateurRepository utilisateurRepository;
+
+    @Autowired
+    PasswordEncoder encoder;
     @Override
     public Utilisateur Creer(Utilisateur utilisateur) {
+        utilisateur.setPassword(encoder.encode(utilisateur.getPassword()));
+
         return utilisateurRepository.save(utilisateur);
     }
 
@@ -44,6 +50,6 @@ public class UtilisateurServiceImple implements UtilisateurService {
 
     @Override
     public Utilisateur GetByName(String name) {
-        return utilisateurRepository.findByUtilisateur(name);
+        return utilisateurRepository.findByNom(name);
     }
 }

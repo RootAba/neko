@@ -10,5 +10,5 @@ public interface PubvideoService {
     void Supprimer (long id);
     List<PubVideo> getAll();
     PubVideo GetId(long id);
-    PubVideo GetByName(String name);
+  //  PubVideo GetByName(String name);
 }
