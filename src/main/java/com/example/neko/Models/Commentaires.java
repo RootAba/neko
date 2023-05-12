@@ -19,7 +19,13 @@ public class Commentaires {
     private Long id;
     private String contenu;
 
+    @ManyToOne
+    private Annonces annonces;
     //Utilisateur peut faire plusieru commentaire
+
+    @ManyToOne
+    private Publications publications;
+
 
     @ManyToOne
     private Utilisateur utilisateur;

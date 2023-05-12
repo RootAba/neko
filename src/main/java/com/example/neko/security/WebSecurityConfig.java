@@ -62,17 +62,11 @@ public class WebSecurityConfig {
 
     private static final String[] abasse = {
             "/api/auth/**",
+            "/entreprise/creer",
             "/Realisation/AfficherRealisation",
             "/Realisation/**",
             "/Commentaire/**",
-            "/Alumnis/**",
-            "/Formation/**",
-            "/Competences/**",
-            "/Promotion/**",
-            "/CV/**",
-            "admin/**",
-            "/Realisation/**",
-            "/AncienApprenant/**",
+
             // -- Swagger UI v2
             "/v2/api-docs",
             "/swagger-resources",

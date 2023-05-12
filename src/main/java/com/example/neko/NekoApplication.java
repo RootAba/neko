@@ -8,8 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import static com.example.neko.Models.ERole.ROLE_ADMIN;
-import static com.example.neko.Models.ERole.ROLE_USER;
+import static com.example.neko.Models.ERole.*;
 
 @SpringBootApplication
 public class NekoApplication {
@@ -35,6 +34,38 @@ public class NekoApplication {
 
 		Roles userRole = roleService.AfficherRoleParLibelle(ROLE_ADMIN)
 				.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+
+		/* ==================Role entreprise ===================*/
+		Roles entreprise = new Roles();
+		entreprise.setId(3);
+		entreprise.setName(ROLE_ENTREPRISE);
+		roleService.AjouterRole(entreprise);
+
+		/* ==================Role ARTISTE ===================*/
+		Roles artiste = new Roles();
+		artiste.setId(4);
+		artiste.setName(ROLE_ARTISTE);
+		roleService.AjouterRole(artiste);
+
+
+		/* ==================Role Commerce ===================*/
+		Roles commerce = new Roles();
+		commerce.setId(5);
+		commerce.setName(ROLE_COMMERCE);
+		roleService.AjouterRole(commerce);
+
+
+		/* ==================Role EMPLOI ===================*/
+		Roles emploi = new Roles();
+		emploi.setId(6);
+		emploi.setName(ROLE_EMPLOI);
+		roleService.AjouterRole(emploi);
+
+		Roles sport = new Roles();
+		sport.setId(7);
+		sport.setName(ROLE_SPORT);
+		roleService.AjouterRole(sport);
+
 
 
 	/*	Utilisateur abba = new Utilisateur();
