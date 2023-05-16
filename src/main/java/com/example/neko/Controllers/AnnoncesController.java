@@ -14,7 +14,9 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = {"http://localhost:4200","http://localhost:8100"} ,allowCredentials = "true")
 @RequestMapping("/annonce")
+
 public class AnnoncesController {
     @Autowired
     AnnoncesService annoncesService;
