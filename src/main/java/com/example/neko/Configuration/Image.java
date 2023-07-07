@@ -18,8 +18,8 @@ public class Image {
     public static String serverpub = localhost + "Neko/publications/";
     public static String serverstorie = localhost + "Neko/stories/";
 
-    public static String Publicationslocation = "C:/xampp2/htdocs/Neko/publications";
-    public static String Storieslocation = "C:/xampp2/htdocs/Neko/stories";
+    public static String Publicationslocation = "C:/wamp6/www/Neko/publications";
+    public static String Storieslocation = "C:/wamp6/www/Neko/stories";
 
     public static String save(String typeImage, MultipartFile file, String nomFichier) {
         String src = "";

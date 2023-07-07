@@ -29,6 +29,7 @@ public class Publications {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
+    private String description;
 /*
     @JsonIgnore
     @OneToMany(mappedBy = "publications")
