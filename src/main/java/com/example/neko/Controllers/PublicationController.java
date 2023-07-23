@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/publication")
+@CrossOrigin(origins = {"http://localhost:4200","http://localhost:8100"} ,allowCredentials = "true",maxAge = 3600)
 public class PublicationController {
     @Autowired
     PublicationRepository publicationRepository;

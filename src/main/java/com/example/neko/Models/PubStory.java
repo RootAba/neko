@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PubStory {
+public class PubStory extends Publications {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

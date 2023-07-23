@@ -1,7 +1,9 @@
 package com.example.neko;
 
+import com.example.neko.Models.Duree;
 import com.example.neko.Models.Roles;
 import com.example.neko.Models.Utilisateur;
+import com.example.neko.Services.DureeService;
 import com.example.neko.Services.RoleService;
 import com.example.neko.Services.UtilisateurService;
 import org.springframework.boot.SpringApplication;
@@ -19,7 +21,7 @@ public class NekoApplication {
 
 		RoleService roleService = ctx.getBean(RoleService.class);
 		UtilisateurService utilisateurService  = ctx.getBean(UtilisateurService.class);
-
+		DureeService dureeService = ctx.getBean(DureeService.class);
 
 		Roles utilisateurs = new Roles();
 		utilisateurs.setId(1);
@@ -66,7 +68,17 @@ public class NekoApplication {
 		sport.setName(ROLE_SPORT);
 		roleService.AjouterRole(sport);
 
+//=====================Duree =============================
+		Duree dure1 = new Duree();
+		dure1.setId(2L);
+		dure1.setDuree("12");
 
+		Duree dure2 = new Duree();
+		dure2.setId(3L);
+		dure2.setDuree("48");
+
+		dureeService.Creer(dure1);
+		dureeService.Creer(dure2);
 
 	/*	Utilisateur abba = new Utilisateur();
 		abba.setNom("abasse");

@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/duree")
+@CrossOrigin(origins = {"http://localhost:4200","http://localhost:8100"} ,allowCredentials = "true",maxAge = 3600)
 public class DureeController {
     @Autowired
     DureeService dureeService;

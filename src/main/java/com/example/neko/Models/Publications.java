@@ -30,11 +30,6 @@ public class Publications {
     private Long id;
     private String nom;
     private String description;
-/*
-    @JsonIgnore
-    @OneToMany(mappedBy = "publications")
-    List<Commentaires> commentaires = new ArrayList<>();-*/
-
 
     @ManyToOne
     private Utilisateur utilisateur;
