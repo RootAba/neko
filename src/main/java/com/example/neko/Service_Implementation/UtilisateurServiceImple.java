@@ -1,5 +1,6 @@
 package com.example.neko.Service_Implementation;
 
+import com.example.neko.Models.Publications;
 import com.example.neko.Models.Utilisateur;
 import com.example.neko.Repository.UtilisateurRepository;
 import com.example.neko.Services.UtilisateurService;
@@ -51,5 +52,10 @@ public class UtilisateurServiceImple implements UtilisateurService {
     @Override
     public Utilisateur GetByName(String name) {
         return utilisateurRepository.findByNom(name);
+    }
+
+    @Override
+    public List<Utilisateur> rechercherUtilisateur(String utilisateur) {
+        return utilisateurRepository.rechercheUtilisateur(utilisateur);
     }
 }

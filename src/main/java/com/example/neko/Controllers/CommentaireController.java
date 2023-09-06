@@ -2,6 +2,7 @@ package com.example.neko.Controllers;
 
 
 import com.example.neko.Models.Commentaires;
+import com.example.neko.Models.Publications;
 import com.example.neko.Repository.CommentaireRepository;
 import com.example.neko.Services.CommentaireService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,13 @@ public class CommentaireController {
     @GetMapping("/get/{id}")
     public Commentaires getId(@PathVariable("id") long id) {
         return commentaireService.GetId(id);
+    }
+
+    @GetMapping("/getcommByIdPub/{id}")
+    public  List<Commentaires> getIdPub(@PathVariable long id) {
+        Publications publications = new Publications();
+        publications.setId(id);
+        return commentaireService.getAllByIdPub(publications);
     }
 
     @GetMapping("/list")

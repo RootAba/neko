@@ -1,5 +1,6 @@
 package com.example.neko.Services;
 
+import com.example.neko.Models.Publications;
 import com.example.neko.Models.Utilisateur;
 
 import java.util.List;
@@ -11,4 +12,6 @@ public interface UtilisateurService {
     List<Utilisateur> getAll();
     Utilisateur GetId(long id);
     Utilisateur GetByName(String name);
+
+    List<Utilisateur> rechercherUtilisateur(String utilisateur);
 }

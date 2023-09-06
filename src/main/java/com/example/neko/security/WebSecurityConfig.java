@@ -65,7 +65,9 @@ public class WebSecurityConfig {
             "/entreprise/creer",
             "/annonce/list",
             "/Commentaire/**",
-            "/pubphoto/**",
+            "/pubphoto/list",
+            "/pubstory/list",
+
 
             // -- Swagger UI v2
             "/v2/api-docs",

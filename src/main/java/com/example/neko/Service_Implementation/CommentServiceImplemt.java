@@ -1,11 +1,13 @@
 package com.example.neko.Service_Implementation;
 
 import com.example.neko.Models.Commentaires;
+import com.example.neko.Models.Publications;
 import com.example.neko.Repository.CommentaireRepository;
 import com.example.neko.Services.CommentaireService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 @Service
 public class CommentServiceImplemt implements CommentaireService {
@@ -40,6 +42,20 @@ public class CommentServiceImplemt implements CommentaireService {
     @Override
     public Commentaires GetId(long id) {
         return commentaireRepository.findById(id).get();
+    }
+
+    @Override
+    public List<Commentaires> getAllByIdPub(Publications publications) {
+      /*  List<Commentaires> Comm =    commentaireRepository.findByPublicationsId(id);
+        List<Commentaires> commDTOs = new ArrayList<>();
+
+        for (Commentaires commEntity : Comm) {
+           // Commentaires commDTO = new Commentaires();
+            // Set other properties in the DTO as needed
+            commDTOs.add(commEntity);
+        }*/
+
+        return commentaireRepository.findByPublications(publications);
     }
 
   /*  @Override

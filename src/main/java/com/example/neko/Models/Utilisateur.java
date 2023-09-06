@@ -101,7 +101,7 @@ public class Utilisateur {
 
 
     @JsonIgnore
-    @OneToMany(mappedBy = "utilisateur")
+    @OneToMany(mappedBy = "commentateur")
     List<Commentaires> commentaires = new ArrayList<>();
 
 

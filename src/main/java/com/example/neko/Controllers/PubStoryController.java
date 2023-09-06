@@ -36,7 +36,7 @@ public class PubStoryController {
                 pubstory1 = new JsonMapper().readValue(pubstory, PubStory.class);
                 System.out.println("PubPhoto "+pubstory1.getStory());
 
-                pubstory1.setStory(Image.save("publications", file, pubstory1.getStory()));
+                pubstory1.setStory(Image.save("stories", file, pubstory1.getStory()));
                 System
                         .out.println("user "+pubstory1.getUtilisateur());
                 pubStoryService.Creer(pubstory1);

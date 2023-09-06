@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/pubaudio")
+@CrossOrigin(origins = {"http://localhost:4200","http://localhost:8100"} ,allowCredentials = "true")
 public class PubAudioController {
     @Autowired
     PubaudioRepository pubaudioRepository;

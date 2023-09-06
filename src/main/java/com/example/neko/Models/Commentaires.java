@@ -28,5 +28,5 @@ public class Commentaires {
 
 
     @ManyToOne
-    private Utilisateur utilisateur;
+    private Utilisateur commentateur;
 }
