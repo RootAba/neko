@@ -20,6 +20,6 @@ public interface UtilisateurRepository extends JpaRepository<Utilisateur,Long> {
     Utilisateur findByEmail(String email);
     Boolean existsByEmail(String email);
 
-    @Query(value = "SELECT * FROM utilisateur WHERE username LIKE %:utilisateur% OR nom LIKE %:utilisateur%", nativeQuery = true)
+    @Query(value = "SELECT * FROM utilisateur  WHERE utilisateur.username ='abba'", nativeQuery = true)
     List<Utilisateur> rechercheUtilisateur(@PathVariable String utilisateur);
 }

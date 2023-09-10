@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/utilisateur")
@@ -41,10 +42,24 @@ public class UtilisateurController {
 
     }
 
-    @GetMapping("/list/{utilisateur}")
+  /*  @GetMapping("/list/{utilisateur}")
     public List<Utilisateur> rechercherUtilisateur(@PathVariable String utilisateur) {
-        return  utilisateurServcice.rechercherUtilisateur(utilisateur);
+        return  utilisateurService.rechercherUtilisateur(utilisateur);
 
+    }*/
+    @GetMapping("/list/{nom}")
+    public List<Utilisateur> rechercherUtilisateursParNom(@PathVariable String nom) {
+        // Récupérer tous les utilisateurs de la base de données
+        List<Utilisateur> utilisateurs = utilisateurRepository.findAll();
+
+        // Filtrer les utilisateurs en fonction du nom passé en paramètre
+        List<Utilisateur> utilisateursFiltres = utilisateurs.stream()
+                .filter(user -> user.getNom().matches("(?i).*" + nom + ".*") ||
+                        user.getUsername().matches("(?i).*" + nom + ".*"))
+                .collect(Collectors.toList());
+   System.out.println("liste des users ");
+   System.out.println(utilisateursFiltres);
+        return utilisateursFiltres;
     }
 
 
